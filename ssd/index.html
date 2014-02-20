@@ -2,10 +2,19 @@
     <html lang="fr" ng-app="DemeterApp">
     <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/foundation.min.css" />
     <title>Atlaso</title>
     <script src="angular.min.js"></script>
+
     <script>
-        
+        var DemeterApp = angular.module('DemeterApp', []);
+
+        DemeterApp.controller('SensorsListCtrl', function ($scope) {
+            $scope.sensors = [
+                {'value': 42}
+            ];
+        })
     </script>
     </head>
     <body ng-controller="SensorsListCtrl">
